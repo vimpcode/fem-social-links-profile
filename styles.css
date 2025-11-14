@@ -12,7 +12,6 @@
   --grey-700: hsl(0, 0%, 20%);
   --grey-800: hsl(0, 0%, 12%);
   --grey-900: hsl(0, 0%, 8%);
-  --blue: hsl(228, 45%, 44%);
   --ff-base: 'Inter', sans-serif;
   --radius: .75em;
 }
@@ -130,11 +129,15 @@ article {
       border-radius: var(--radius);
       transition: all .2s ease-in-out;
 
-      &:focus-visible,
-      &:hover {
+      &:hover,
+      &:focus-visible {
         background-color: var(--green);
         color: var(--grey-800);
         outline: none;
+      }
+
+      &:active {
+        transform: scale(.98);
       }
     }
   }
@@ -186,8 +189,8 @@ footer {
       outline: none;
     }
 
-    &:focus-visible::after,
-    &:hover::after {
+    &:hover::after,
+    &:focus-visible::after {
       inline-size: 0;
     }
   }
